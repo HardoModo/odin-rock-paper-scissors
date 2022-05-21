@@ -10,7 +10,8 @@ function computerPlay() {
 const computerSelection = "Rock" /*computerPlay()*/;
 
 function gameTime(playerSelection, computerSelection) {
-    if (playerSelection == "Rock") {
+    let test = playerSelection.toLowerCase();
+    if (test == "rock") {
         if (computerSelection == "Rock") {
             return "Tie. Rocks."
         } else if (computerSelection == "Paper") {
@@ -19,7 +20,7 @@ function gameTime(playerSelection, computerSelection) {
             return "You win! Rock beats Scissors!"
         }
     }
-    else if (playerSelection == "Paper") {
+    else if (test == "paper") {
         if (computerSelection == "Paper") {
             return "Tie. Paper."
         } else if (computerSelection == "Scissors") {
@@ -28,7 +29,7 @@ function gameTime(playerSelection, computerSelection) {
             return "You win! Paper beats rock!"
         }
     }
-    else if (playerSelection == "Scissors") {
+    else if (test == "scissors") {
         if (computerSelection == "Scissors") {
             return "Tie. Scissors."
         } else if (computerSelection == "Rock") {
@@ -36,6 +37,9 @@ function gameTime(playerSelection, computerSelection) {
         } else if (computerSelection == "Paper") {
             return "You win! Scissors beats paper!"
         }
+    }
+    else {
+        return "Oops!"
     }
 }
 
