@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Please choose your weapon.")
-        computerSelection = "Rock"
+        computerSelection = computerPlay()
         console.log(playRound(playerSelection, computerSelection))
     }
 }
