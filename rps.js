@@ -1,5 +1,3 @@
-let playerSelection = "Scissors" /*prompt("Please choose your weapon.")*/
-
 function computerPlay() {
     const outcomes = ["Rock", "Paper", "Scissors"];
 
@@ -7,9 +5,9 @@ function computerPlay() {
     return outcomes[random]
 }
 
-const computerSelection = "Rock" /*computerPlay()*/;
+/*const computerSelection = "Rock" computerPlay()*/;
 
-function gameTime(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     let test = playerSelection.toLowerCase();
     if (test == "rock") {
         if (computerSelection == "Rock") {
@@ -43,4 +41,12 @@ function gameTime(playerSelection, computerSelection) {
     }
 }
 
-console.log(playerSelection, computerSelection, gameTime(playerSelection, computerSelection))
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("Please choose your weapon.")
+        computerSelection = "Rock"
+        console.log(playRound(playerSelection, computerSelection))
+    }
+}
+
+game()
