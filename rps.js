@@ -1,4 +1,4 @@
-let playerSelection = "Rock" /*prompt("Please choose your weapon.")*/
+let playerSelection = "Paper" /*prompt("Please choose your weapon.")*/
 
 function computerPlay() {
     const outcomes = ["Rock", "Paper", "Scissors"];
@@ -7,7 +7,7 @@ function computerPlay() {
     return outcomes[random]
 }
 
-const computerSelection = "Rock" /*computerPlay()*/;
+const computerSelection = "Scissors" /*computerPlay()*/;
 
 function gameTime(playerSelection, computerSelection) {
     if (playerSelection == "Rock") {
@@ -19,8 +19,16 @@ function gameTime(playerSelection, computerSelection) {
             return "You win! Rock beats Scissors!"
         }
     }
+    else if (playerSelection == "Paper") {
+        if (computerSelection == "Paper") {
+            return "Tie. Paper."
+        } else if (computerSelection == "Scissors") {
+            return "You lose. Scissors beats paper."
+        } else if (computerSelection == "Rock") {
+            return "You win! Paper beats rock!"
+        }
+    }
 
 }
 
 console.log(playerSelection, computerSelection, gameTime(playerSelection, computerSelection))
-/*console.log(playerSelection == computerSelection)*/
