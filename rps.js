@@ -1,3 +1,5 @@
+let input = prompt("Please choose your weapon")
+
 function computerPlay() {
     const outcomes = ["Rock", "Paper", "Scissors"];
 
