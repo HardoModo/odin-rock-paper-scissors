@@ -5,8 +5,6 @@ function computerPlay() {
     return outcomes[random]
 }
 
-/*const computerSelection = "Rock" computerPlay()*/;
-
 function playRound(playerSelection, computerSelection) {
     let test = playerSelection.toLowerCase();
     if (test == "rock") {
@@ -42,11 +40,19 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
+    let playerScore = 0
+    let compScore = 0
     for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Please choose your weapon.")
-        computerSelection = computerPlay()
+        let playerSelection = "Rock" /*prompt("Please choose your weapon.")*/
+        computerSelection = "Paper" /*computerPlay()*/
         console.log(playRound(playerSelection, computerSelection))
+        if (playRound(playerSelection, computerSelection).includes("win")) {
+            playerScore++
+        } else if (playRound(playerSelection, computerSelection).includes("lose")) {
+            compScore++
+        }
     }
+    console.log(compScore, playerScore)
 }
 
 game()
