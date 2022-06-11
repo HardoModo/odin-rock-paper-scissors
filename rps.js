@@ -57,6 +57,7 @@ function game() {
         }
     }
     console.log(compScore, playerScore)
+    document.getElementById("Score").innerHTML = playerScore
 }
 
 /*game()*/
