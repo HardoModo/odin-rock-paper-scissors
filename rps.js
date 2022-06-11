@@ -1,3 +1,7 @@
+const rock = document.getElementById("Rock")
+const paper = document.getElementById("Paper")
+const scissors = document.getElementById("Scissors")
+
 function computerPlay() {
     const outcomes = ["Rock", "Paper", "Scissors"];
 
@@ -55,4 +59,20 @@ function game() {
     console.log(compScore, playerScore)
 }
 
-game()
+/*game()*/
+
+function fun1() {
+    console.log("Rock")
+}
+
+function fun2() {
+    console.log("Paper")
+}
+
+function fun3() {
+    console.log("Scissors")
+}
+
+rock.addEventListener("click", fun1)
+paper.addEventListener("click", fun2)
+scissors.addEventListener("click", fun3)
