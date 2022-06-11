@@ -10,8 +10,8 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    let test = playerSelection.toLowerCase();
-    if (test == "rock") {
+    let input = playerSelection.toLowerCase();
+    if (input == "rock") {
         if (computerSelection == "Rock") {
             return "Tie. Rocks."
         } else if (computerSelection == "Paper") {
@@ -20,7 +20,7 @@ function playRound(playerSelection, computerSelection) {
             return "You win! Rock beats Scissors!"
         }
     }
-    else if (test == "paper") {
+    else if (input == "paper") {
         if (computerSelection == "Paper") {
             return "Tie. Paper."
         } else if (computerSelection == "Scissors") {
@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection) {
             return "You win! Paper beats rock!"
         }
     }
-    else if (test == "scissors") {
+    else if (input == "scissors") {
         if (computerSelection == "Scissors") {
             return "Tie. Scissors."
         } else if (computerSelection == "Rock") {
@@ -47,8 +47,8 @@ function game() {
     let playerScore = 0
     let compScore = 0
     for (let i = 0; i < 5; i++) {
-        let playerSelection = "Rock" /*prompt("Please choose your weapon.")*/
-        computerSelection = "Paper" /*computerPlay()*/
+        let playerSelection = prompt("Please choose your weapon.")
+        computerSelection = computerPlay()
         console.log(playRound(playerSelection, computerSelection))
         if (playRound(playerSelection, computerSelection).includes("win")) {
             playerScore++
@@ -62,15 +62,18 @@ function game() {
 /*game()*/
 
 function fun1() {
-    console.log("Rock")
+    console.log("You have chosen rock.")
+    console.log(playRound("Rock", computerPlay()))
 }
 
 function fun2() {
-    console.log("Paper")
+    console.log("You have chosen paper.")
+    console.log(playRound("Paper", computerPlay()))
 }
 
 function fun3() {
-    console.log("Scissors")
+    console.log("You have chosen scissors.")
+    console.log(playRound("Scissors", computerPlay()))
 }
 
 rock.addEventListener("click", fun1)
