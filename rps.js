@@ -55,20 +55,20 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function fun1() {
+function playRock() {
     console.log("You have chosen rock.")
     computerSelection = computerPlay()
     console.log(playRound("Rock", computerPlay()))
     console.log(playerScore, compScore)
 }
 
-function fun2() {
+function playPaper() {
     console.log("You have chosen paper.")
     console.log(playRound("Paper", computerPlay()))
     console.log(playerScore, compScore)
 }
 
-function fun3() {
+function playScissors() {
     console.log("You have chosen scissors.")
     console.log(playRound("Scissors", computerPlay()))
     console.log(playerScore, compScore)
@@ -84,9 +84,9 @@ function update() {
     }
 }
 
-rock.addEventListener("click", fun1)
-paper.addEventListener("click", fun2)
-scissors.addEventListener("click", fun3)
+rock.addEventListener("click", playRock)
+paper.addEventListener("click", playPaper)
+scissors.addEventListener("click", playScissors)
 buttons.forEach((button) => {
     button.addEventListener("click", update)
 })
