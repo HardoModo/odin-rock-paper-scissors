@@ -77,6 +77,11 @@ function fun3() {
 function update() {
     myScore.innerHTML = playerScore
     theirScore.innerHTML = compScore
+    if (playerScore == 5) {
+        console.log("You are a winner!")
+    } else if (compScore == 5) {
+        console.log("You have lost.")
+    }
 }
 
 rock.addEventListener("click", fun1)
