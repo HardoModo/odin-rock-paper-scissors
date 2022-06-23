@@ -5,9 +5,9 @@ const buttons = document.querySelectorAll("button")
 
 var myScore = document.getElementById("myScore")
 var theirScore = document.getElementById("theirScore")
-var shout = document.getElementById("shout")
+var chose = document.getElementById("text1")
+var shout = document.getElementById("text2")
 var winner = document.getElementById("declareWinner")
-var chose = document.getElementById("chose")
 var playerScore = 0
 var compScore = 0
 
@@ -73,14 +73,20 @@ function playScissors() {
     newStatus = playRound("Scissors", computerPlay())
 }
 
+function newGame() {
+    console.log("Start new game")
+}
+
 function update() {
     myScore.innerHTML = playerScore
     theirScore.innerHTML = compScore
     shout.innerHTML = newStatus
     if (playerScore == 5) {
         winner.innerHTML = "You are a winner!"
+        newGame()
     } else if (compScore == 5) {
         winner.innerHTML = "You have lost."
+        newGame()
     }
 }
 
