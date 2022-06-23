@@ -5,14 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div>
-        <p id="myScore">0</p>
-        <p id="theirScore">0</p>
+    <div class="announcement">
+        <p id="shout">Begin!</p>
+        <p id="chose">What will your chose be?</p>
+        <p id="declareWinner">Test</p>
     </div>
 
-    <div class = "Buttons">
+    <div class="scoreBoard">
+        <div class="myScore">
+            <p>This is your score:</p>
+            <p id="myScore">0</p>
+        </div>
+
+        <div class="theirScore">
+            <p>This is their score:</p>
+            <p id="theirScore">0</p>
+        </div>
+    </div>
+
+    <div class = "buttons">
         <button id ="Rock" type="button">Rock</button>
         <button id ="Paper" type="button">Paper</button>
         <button id ="Scissors" type="button">Scissors</button>

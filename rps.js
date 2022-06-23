@@ -5,6 +5,9 @@ const buttons = document.querySelectorAll("button")
 
 var myScore = document.getElementById("myScore")
 var theirScore = document.getElementById("theirScore")
+var shout = document.getElementById("shout")
+var winner = document.getElementById("declareWinner")
+var chose = document.getElementById("chose")
 var playerScore = 0
 var compScore = 0
 
@@ -56,31 +59,28 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function playRock() {
-    console.log("You have chosen rock.")
-    computerSelection = computerPlay()
-    console.log(playRound("Rock", computerPlay()))
-    console.log(playerScore, compScore)
+    chose.innerHTML = "You have chosen rock."
+    newStatus = playRound("Rock", computerPlay())
 }
 
 function playPaper() {
-    console.log("You have chosen paper.")
-    console.log(playRound("Paper", computerPlay()))
-    console.log(playerScore, compScore)
+    chose.innerHTML = "You have chosen paper."
+    newStatus = playRound("Paper", computerPlay())
 }
 
 function playScissors() {
-    console.log("You have chosen scissors.")
-    console.log(playRound("Scissors", computerPlay()))
-    console.log(playerScore, compScore)
+    chose.innerHTML = "You have chosen scissors."
+    newStatus = playRound("Scissors", computerPlay())
 }
 
 function update() {
     myScore.innerHTML = playerScore
     theirScore.innerHTML = compScore
+    shout.innerHTML = newStatus
     if (playerScore == 5) {
-        console.log("You are a winner!")
+        winner.innerHTML = "You are a winner!"
     } else if (compScore == 5) {
-        console.log("You have lost.")
+        winner.innerHTML = "You have lost."
     }
 }
 
